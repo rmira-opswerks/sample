@@ -1,0 +1,9 @@
+# global.yml
+---
+- name: Execute tasks
+  hosts: all
+  become: true
+  vars_files:
+    - secrets.yml
+  tasks:
+    - include_tasks: main.yml

@@ -1,0 +1,13 @@
+# task-set-hostnames.yml
+---
+- name: Set hostname for virtualmachine-2
+  command: hostnamectl set-hostname virtualmachine-2
+  args:
+    creates: /etc/hostname-virtualmachine-2
+  when: "'192.168.1.12' in inventory_hostname"
+
+- name: Set hostname for virtualmachine-3
+  command: hostnamectl set-hostname virtualmachine-3
+  args:
+    creates: /etc/hostname-virtualmachine-3
+  when: "'192.168.1.13' in inventory_hostname"

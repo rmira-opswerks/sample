@@ -1,0 +1,7 @@
+# Execute playbook tasks
+---
+- name: create users
+  include_tasks: task-create-users.yml
+
+- name: set hostnames
+  include_tasks: task-set-hostnames.yml
